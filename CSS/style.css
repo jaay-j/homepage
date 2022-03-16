@@ -1,0 +1,76 @@
+@font-face {
+    font-family: myFont;
+    src: url(Fonts/Gallinari-ExtBdCondObliq.otf)
+}
+
+h1 {
+    font-family: "myFont";
+    text-align: center;
+    margin-top: 30px;
+    color: magenta;
+}
+
+body{
+    background-color: rgb(255, 255, 118);
+    height: 3000px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*4, 1fr for 4X2*/
+}
+
+.item{
+    height: 100px;
+    border: 1px solid blue;
+}
+
+p {
+    font-size: 20;
+    margin-top: 5px;
+    filter: blur(2px);
+}
+
+#title1 {
+    filter: blur(2px);
+}
+
+.block {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 500px;
+    left: 0px;
+    background-color: rgb(250, 142, 0);
+}
+
+@keyframes anim{
+    0% {
+        top: 500px;
+        left: 0px;
+    }
+    25% {
+        top: 500px;
+        left: 300px;
+    }
+    50% {
+        top: 100px;
+        lef: 300px;
+    }
+    75% {
+        top: 700px;
+        lef: 200px;
+    }
+}
+
+.move {
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+#last {
+    opacity: 0.3;
+}
+p {
+    text-align: center;
+}
